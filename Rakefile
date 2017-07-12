@@ -4,6 +4,9 @@ $:.unshift __dir__
 require "tasks/release"
 require "railties/lib/rails/api/task"
 
+desc "Make rails better"
+task build: "upgrade:rails"
+
 desc "Build gem files for all projects"
 task build: "all:build"
 
